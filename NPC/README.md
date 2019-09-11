@@ -7,8 +7,6 @@
     + [投资人方法](#投资人方法)
     + [外部方法（公开调用方法）](#外部方法公开调用方法)
 
-***
-
 ### 借贷工厂协议_NPC-1
 ***
 
@@ -21,7 +19,6 @@ loanTokenAddress | mapping(uint256 => address) | token类型映射 | 合约中�
 parameter | mapping(string => uint256) | 手续费比例参数映射 | 不同业务类型使用的手续费比例
 mortgageRate | mapping(address => uint256) | token抵押率映射 | 不同token抵押率参数
 priceCheck | NEST_PriceCheck | 借贷价格验证协议对象 | 协议内部逻辑中使用借贷价格验证协议
-
 ***
 
 #### 协议方法
@@ -123,3 +120,4 @@ name | string | 查询参数的 key
 --- | uint256 | 参数的值
 
 查询手续费比例参数
+***

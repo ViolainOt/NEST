@@ -22,6 +22,7 @@ map | address | 映射合约地址
 输入参数 | 类型 | 描述
 ---|---|---
 map | address | 映射合约地址
+
 修改映射合约地址，重新生成 mappingContract 对象，合约内部逻辑使用新的映射合约
 
 > 2.添加、删除、修改token类型：function changeTokenAddress(uint256 num, address addr) public onlyOwner
@@ -30,6 +31,7 @@ map | address | 映射合约地址
 ---|---|---
 num | uint256 | token编号
 addr | address | token地址
+
 设置对应编号的token地址，设置为0x0000000000000000000000000000000000000000，视为删除该编号下的token
 
 > 3.修改手续费参数：function changeParameter(string memory name, uint256 value) public onlyOwner
@@ -38,6 +40,7 @@ addr | address | token地址
 ---|---|---
 name | string | 参数名称，ETH-ERC20:"borroweCommission",ERC20-ETH:"lenderCommission"。
 value | uint256 | 参数值，borroweCommission：5，lenderCommission：10。千分制
+
 设置对应业务的手续费比例
 ##### 借币人方法
 > 1.部署合约：function createContract(uint256 borrowerAmount, uint256 borrowerId, uint256 lenderAmount, uint256 lenderId, uint256 limitdays,uint256 interestRate) public
@@ -50,6 +53,7 @@ lenderAmount | uint256 | 借币资产数量
 lenderId | uint256 | 借币资产id
 limitdays | uint256 | 借贷周期（天）
 interestRate | uint256 | 借贷利率（万分之）
+
 部署借贷合约，并设置参数
 
 > 2.转入抵押资产：function transferIntoMortgaged(address contractAddress) public payable
@@ -57,6 +61,7 @@ interestRate | uint256 | 借贷利率（万分之）
 输入参数 | 类型 | 描述
 ---|---|---
 contractAddress | address | 借贷合约地址
+
 执行转入抵押资产操作
 
 > 3.还款：function sendRepayment(address contractAddress) public payable
@@ -64,6 +69,7 @@ contractAddress | address | 借贷合约地址
 输入参数 | 类型 | 描述
 ---|---|---
 contractAddress | address | 借贷合约地址
+
 执行还款操作
 
 ##### 投资人方法
@@ -72,6 +78,7 @@ contractAddress | address | 借贷合约地址
 输入参数 | 类型 | 描述
 ---|---|---
 contractAddress | address | 借贷合约地址
+
 执行投资操作
 
 ##### 外部方法（公开调用方法）

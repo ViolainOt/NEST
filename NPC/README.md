@@ -7,8 +7,6 @@
     + [投资人方法](#-----)
     + [外部方法（公开调用方法）](#------------)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 ### 借贷工厂协议_NPC-1
 #### 协议属性

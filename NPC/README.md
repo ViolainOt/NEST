@@ -121,3 +121,135 @@ name | string | 查询参数的 key
 
 查询手续费比例参数
 ***
+
+
+
+- [Mortgage Loan Factory Protocol_NPC-1](#Mortgage Loan Factory Protocol_NPC-1)
+  * [Protocol Attributes](#Protocol Attributes)
+  * [Protocol Methods](#Protocol Methods)
+    + [Initialization Methods](#Initialization Methods)
+    + [Modify Permission Methods](#Modify Permission Methods)
+    + [Borrower Methods](#Borrower Methods)
+    + [Investor Methods](#Investor Methods)
+    + [External Methods (public configuration methods)](#External Methods (public configuration methods))
+
+### Mortgage Loan Factory Protocol_NPC-1
+***
+
+#### Protocol Attributes
+Attribute | Type | Function | Description
+---|---|---|---
+dataContract | NEST_ToLoanDataContract | Data protocol object | Data protocol used in the internal logic of the protocol
+mappingContract | IBMapping | Mapping contract object | Mapping contract used in the internal logic of the contract
+loanTokenAddress | mapping(uint256 => address) | Token type mapping | Token type that supported in the contract
+parameter | mapping(string => uint256) | Handling fee proportion parameter mapping | Proportion of fees for different types of business
+mortgageRate | mapping(address => uint256) | Token mortgage rate mapping | Mortgage rate of different token mortgage
+priceCheck | NEST_PriceCheck | Loan price verification protocol object  | Loan price verification protocol used in the internal logic of the protocol
+***
+
+ 
+
+#### Protocol Methods
+##### Initialization Methods
+> 1. Initialization method: constructor(address map) public
+
+Input Parameter | Type | Description
+---|---|---
+map | address | mapping contract address
+
+Deploying contract, generate contract according to the input address, check mapping contract returns data
+contract address, generate data contract object. Initialize handling fee parameter.
+
+##### Modify Permission Methods
+> 1. Modify mapping contract address: function changeMapping(address map) public onlyOwner
+
+Input Parameter | Type | Description
+---|---|---
+map | address | mapping contract address
+
+Modify mapping contract address, regenerate new mappingContract object, use new mapping contract in the
+internal logic of the contract.
+
+> 2. Add, delete, modify token type: function changeTokenAddress(uint256 num, address addr) public onlyOwner
+
+Input Parameter | Type | Description
+---|---|---
+num | uint256 | token number
+addr | address | token address
+
+Setting corresponded number of token address, setting as 0x0000000000000000000000000000000000000000, consider deleting the token under the number.
+
+> 3. Modify handling fee parameter: function changeParameter(string memory name, uint256 value) public onlyOwner
+
+Input Parameter | Type | Description
+---|---|---
+name | string | parameter names，ETH- ERC20:"borroweCommission", ERC20- ETH:"lenderCommission"。
+value | uint256 | parameter values，borroweCommission: 5, lenderCommission: 10, thousand points system
+
+Setting handling fee proportion of corresponded business.
+
+##### Borrower Methods
+> 1.Deploy contract: function createContract(uint256 borrowerAmount, uint256 borrowerId, uint256 lenderAmount, uint256 lenderId, uint256 limitdays,uint256 interestRate) public
+
+Input Parameter | Type | Description
+---|---|---
+borrowerAmount | uint256 | amount of mortgage assets
+borrowerId | uint256 | id of mortgage assets
+lenderAmount | uint256 | amount of lending assets
+lenderId | uint256 | id of lending assets
+limitdays | uint256 | loan cycle (day)
+interestRate | uint256 | loan rate (per 10 thousand)
+
+Deploying loan contract，and setting parameters.
+
+> 2. Transfer in mortgage asset: function transferIntoMortgaged(address contractAddress) public payable
+
+Input Parameter | Type | Description
+---|---|---
+contractAddress | address | loan contract address
+
+Execute transfer in mortgage asset operation.
+
+> 3. Repayment: function sendRepayment(address contractAddress) public payable
+
+Input Parameter | Type | Description
+---|---|---
+contractAddress | address | loan contract address
+
+Execute repayment operation.
+
+##### Investor Methods
+> 1. Investment: function investmentContracts(address contractAddress) public payable
+
+Input parameter | Type | Description
+---|---|---
+contractAddress | address | loan contract address
+
+Execute investment operation.
+
+##### External Methods (public configuration methods)
+> 1. Check responded id of token address: function checkToken(uint256 num) public view returns (address)
+
+Input Parameter | Type | Description
+---|---|---
+num | uint256 | check id of token
+
+Output Parameter | Type | Description
+---|---|---
+--- | address | token address
+
+Check responded id of token address.
+
+> 2. Check handling fee proportion parameter: function checkParameter(string memory name) public view returns(uint256)
+
+Input Parameter | Input Parameter | Description
+---|---|---
+name | string | key of check parameter
+
+Output Parameter | Type | Description
+---|---|---
+--- | uint256 | value of parameter
+
+Check handling fee proportion parameter.
+***
+

@@ -124,14 +124,14 @@ name | string | 查询参数的 key
 
 
 
-- [Mortgage Loan Factory Protocol_NPC-1](#Mortgage Loan Factory Protocol_NPC-1)
-  * [Protocol Attributes](#Protocol Attributes)
-  * [Protocol Methods](#Protocol Methods)
-    + [Initialization Methods](#Initialization Methods)
-    + [Modify Permission Methods](#Modify Permission Methods)
-    + [Borrower Methods](#Borrower Methods)
-    + [Investor Methods](#Investor Methods)
-    + [External Methods (public configuration methods)](#External Methods (public configuration methods))
+- [Mortgage Loan Factory Protocol_NPC-1](#Mortgage-Loan-Factory-Protocol_NPC-1)
+  * [Protocol Attributes](#Protocol-Attributes)
+  * [Protocol Methods](#Protocol-Methods)
+    + [Initialization Methods](#Initialization-Methods)
+    + [Modify Permission Methods](#Modify-Permission-Methods)
+    + [Borrower Methods](#Borrower-Methods)
+    + [Investor Methods](#Investor-Methods)
+    + [External Methods (public configuration methods)](#External-Methods-(public-configuration-methods))
 
 ### Mortgage Loan Factory Protocol_NPC-1
 ***

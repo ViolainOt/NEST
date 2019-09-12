@@ -131,7 +131,7 @@ name | string | 查询参数的 key
     + [Modify Permission Methods](#Modify-Permission-Methods)
     + [Borrower Methods](#Borrower-Methods)
     + [Investor Methods](#Investor-Methods)
-    + [External Methods (public configuration methods)](#External-Methods-(public-configuration-methods))
+    + [External Methods (public configuration methods)](#external-methods-public-configuration-methods)
 
 ### Mortgage Loan Factory Protocol_NPC-1
 ***

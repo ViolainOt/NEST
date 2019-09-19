@@ -150,7 +150,7 @@ map | address | 映射合约地址
 
 
 - [Mortgage Loan Factory Protocol_NPC-1](#Mortgage-Loan-Factory-Protocol_NPC-1)
-- [Mining Pool Contract_NPC-2](#Mining-Pool-Contract_NPC-1)
+- [Mining Pool Contract_NPC-2](#mining-pool-contract_npc-2)
 ### Mortgage Loan Factory Protocol_NPC-1
 ***
 

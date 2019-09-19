@@ -1,16 +1,6 @@
 - [借贷工厂协议_NPC-1](#借贷工厂协议_NPC-1)
-  * [协议属性](#协议属性)
-  * [协议方法](#协议方法)
-    + [初始化方法](#初始化方法)
-    + [修改权限方法](#修改权限方法)
-    + [借币人方法](#借币人方法)
-    + [投资人方法](#投资人方法)
-    + [外部方法（公开调用方法）](#外部方法公开调用方法)
 - [矿池存储协议_NPC-2](#矿池存储协议_NPC-2)
-  * [协议属性](#协议属性)
-  * [协议方法](#协议方法)
-    + [初始化方法](#初始化方法)
-    + [修改权限方法](#修改权限方法)
+
 
 ### 借贷工厂协议_NPC-1
 ***
@@ -160,13 +150,6 @@ map | address | 映射合约地址
 
 
 - [Mortgage Loan Factory Protocol_NPC-1](#Mortgage-Loan-Factory-Protocol_NPC-1)
-  * [Protocol Attributes](#Protocol-Attributes)
-  * [Protocol Methods](#Protocol-Methods)
-    + [Initialization Methods](#Initialization-Methods)
-    + [Modify Permission Methods](#Modify-Permission-Methods)
-    + [Borrower Methods](#Borrower-Methods)
-    + [Investor Methods](#Investor-Methods)
-    + [External Methods (public configuration methods)](#external-methods-public-configuration-methods)
 
 ### Mortgage Loan Factory Protocol_NPC-1
 ***

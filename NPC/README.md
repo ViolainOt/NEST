@@ -150,7 +150,7 @@ map | address | 映射合约地址
 
 
 - [Mortgage Loan Factory Protocol_NPC-1](#Mortgage-Loan-Factory-Protocol_NPC-1)
-
+- [Mining Pool Contract_NPC-2](#Mining-Pool-Contract_NPC-1)
 ### Mortgage Loan Factory Protocol_NPC-1
 ***
 
@@ -269,5 +269,35 @@ Output Parameter | Type | Description
 --- | uint256 | value of parameter
 
 Check handling fee proportion parameter.
+***
+
+### Mining Pool Contract_NPC-2
+***
+
+#### Contract Attributes 
+Attribute | Type | Function | Description 
+---|---|---|---
+mappingContract | IBMapping | save mapping contract object | mapping contract 
+nestContract | ERC20 | save NEST ERC20 object | NEST Token 
+***
+
+#### Contract Methods 
+##### Initialization Method 
+> 1.Initialization method：constructor (address map) public 
+
+Input Parameter | Type | Description 
+---|---|---
+map | address | mapping contract address 
+
+Initialize mapping contract, retrieve NEST token address from mapping contract, and instantiate NEST Token 
+
+##### Super Administrator Method
+> 1. Modify mapping contract：function changeMapping(address map) public onlyOwner
+
+Input Parameter | Type | Description 
+---|---|---
+map | address | mapping contract address 
+
+Re-initialize mapping contract, retrieve NEST token address from mapping contract, and instantiate NEST Token
 ***
 
